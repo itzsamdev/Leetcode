@@ -5,6 +5,7 @@
 // Naive Approach Time O(N^2)
 for (int i = 0; i < nums.size(); i++)
 {
+    // Iterating each index
     for (int j = i + 1; j < nums.size(); j++)
     {
         if (nums[i] + nums[j] == target)
@@ -19,6 +20,7 @@ for (int i = 0; i < nums.size(); i++)
 // Better Approach (using hashmap to storing key,values)
 vector<int> twoSum(vector<int> &nums, int target)
 {
+    // Map to store values with indexes
     unordered_map<int, int> answer;
     int n = nums.size();
     for (int i = 0; i < n; i++)
@@ -38,8 +40,12 @@ vector<int> twoSum(vector<int> &nums, int target)
 {
     vector<pair<int, int>> v;
     int n = nums.size();
+
+    // Pushing array elements with their indexes
     for (int i = 0; i < n; i++)
         v.push_back({nums[i], i});
+
+    // Sortimg array
     sort(v.begin(), v.end());
 
     int s = 0, e = n - 1;
