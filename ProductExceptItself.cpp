@@ -7,6 +7,7 @@
 // division operation.
 
 // Approach: Take product of left side of array then right side
+
 vector<int> productExceptSelf(vector<int> &nums)
 {
     vector<int> v(nums.size(), 1);
