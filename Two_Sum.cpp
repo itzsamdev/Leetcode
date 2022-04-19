@@ -30,12 +30,13 @@ vector<int> twoSum(vector<int> &nums, int target)
         {
             return {i, answer[y]};
         }
+        // To store indexes
         answer[nums[i]] = i;
     }
     return {-1, -1};
 }
 
-// Best Approach (Using teo pointers)
+// Best Approach (Using two pointers)
 vector<int> twoSum(vector<int> &nums, int target)
 {
     vector<pair<int, int>> v;
@@ -45,7 +46,7 @@ vector<int> twoSum(vector<int> &nums, int target)
     for (int i = 0; i < n; i++)
         v.push_back({nums[i], i});
 
-    // Sortimg array
+    // Sorting array
     sort(v.begin(), v.end());
 
     int s = 0, e = n - 1;
