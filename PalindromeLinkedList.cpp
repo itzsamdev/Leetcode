@@ -1,3 +1,5 @@
+// Given the head of a singly linked list, return true if it is a palindrome.
+
 ListNode *reverseList(ListNode *head)
 {
     ListNode *prev = NULL;
